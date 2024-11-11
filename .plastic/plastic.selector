@@ -1,0 +1,3 @@
+repository "Physics Component Test@picheyprak@cloud"
+  path "/"
+    smartbranch "/main"
