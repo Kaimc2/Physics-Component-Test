@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class ThirdPersonController : MonoBehaviour
 {
@@ -29,6 +30,11 @@ public class ThirdPersonController : MonoBehaviour
             playerLocomotion.gameObject.SetActive(false);
             firstPersonCharacter.gameObject.SetActive(true);
             dotUI.gameObject.SetActive(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 

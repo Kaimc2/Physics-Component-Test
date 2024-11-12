@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class FirstPersonController: MonoBehaviour
+public class FirstPersonController : MonoBehaviour
 {
     public CharacterController player;
     public Transform thirdPersonCharacter;
@@ -47,6 +48,11 @@ public class FirstPersonController: MonoBehaviour
             player.gameObject.SetActive(false);
             thirdPersonCharacter.gameObject.SetActive(true);
             dotUI.gameObject.SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
